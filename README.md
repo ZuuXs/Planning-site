@@ -1,66 +1,183 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Site de gestion des plannings
 
-## About Laravel
+## Présentation du Site
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p> <strong> Le site permet de gérer les plannings dans une formation, il comporte 3 acteurs : </strong></p>
+<ul>
+<li>Les étudiants : ils peuvent s’inscrire pour des cours de leur formation et voir leur planning personnalisé.
+</li>
+<li>Les enseignants : Ils sont responsables du cours et peuvent déplacer ou créer des séances (entrées) dans le planning. Il
+peuvent également voir leur planning personnalisé.</li>
+ <li>L’administrateur : Il fait les tâches de gestion – création/modification des cours, formations, enseignants et étudiants. Il
+peut également faire toutes les tâches des étudiants et des enseignants, ainsi que voir le planning pour tout le monde.</li>
+ </ul>
+ 
+## Fonctionnalités
+<ol>
+    <li>
+       <strong>les étudiants : </strong></li>
+    
+<ul>
+ <li> Voir la liste des cours de la formation (dans laquelle l’étudiant est inscrit).
+   
+ </li>
+   
+ <li>Gestion des inscriptions :
+    <ul> 
+      <li>Inscription dans un cours</li>
+      <li>Désinscription d’un cours</li>
+      <li>Liste des cours auxquels l’étudiant est inscrit</li>
+      <li>Rechercher un cours dans la liste des cours de la formation</li> 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+   </ul> 
+   
+   
+ </li>
 
-## Learning Laravel
+ <li> Affichage du planning personnalisé (uniquement les séances des cours auxquels cet étudiant est inscrit) :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+  <ul> 
+      <li>Intégral</li>
+      <li>Par cours</li>
+      <li>Par semaine</li>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+   </ul>  
+   </li>
+      
+ </ul>
+ </br>
+ <li><strong> Les enseignants : </strong></li>
+ <ul>
+    <li>Voir la liste des cours dont on est responsable</li>
+ <li> Voir le planning personnalisé (les séances dont on est responsable) :
 
-## Laravel Sponsors
+  <ul> 
+      <li>Intégral</li>
+      <li>Par cours</li>
+      <li>Par semaine</li>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+   </ul>  
+ </li> 
+ <li> Gestion du planning :
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   <ul> 
+      <li>Création d’une nouvelle séance de cours</li>
+      <li>Mise à jour d’une séance de cours.</li>
+      <li>Suppression d’une séance de cours</li>
+      <li>Utilisation 2 vues différentes pour les opérations ci-dessus (par cours et par semaine)</li>
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   </ul>  
+ </li> 
+  <li><strong> Pour l’utilisateur (étudiant ou enseignant) : </strong></li>
+      <ul> 
+      <li>Création du compte</li>
+      <li>Changement de son mot de passe</li>
+      <li>Modification du nom/prénom</li>
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   </ul> 
 
-## Security Vulnerabilities
+   </ul>
+   </br>
+ <li><strong> L’administrateur : </strong></li>
+ <ul>
+ 
+ <li> Gestion des utilisateurs :
+    <ul> 
+ <li>Liste :
+    <ul> 
+      <li>Intégrale</li>
+      <li>Filtre par type (étudiant/enseignant)</li>
+      <li>Recherche par nom/prénom/login</li>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   </ul> 
+   
+   
+ </li>
+      <li>Acceptation (ou refus) d’un utilisateur qui a été auto-crée</li>
+      <li>Association d’un enseignant à un cours</li>
+      <li>Création d’un utilisateur</li>
+      <li>Modification d’un utilisateur (y compris le type)</li>
+      <li>Suppression d’un utilisateur</li>
+        
+      
+   </ul>    
+ </li>
+ 
+ <li> Gestion des cours :
+    <ul> 
+      <li>Liste</li>
+      <li>Recherche par intitulé</li>
+      <li>Création d’un cours</li>
+      <li>Modification d’un cours</li>
+      <li>Suppression d’un cours</li>
+     <li>Association d’un enseignant à un cours</li>
+     <li>Liste des cours par enseignant (pour n’importe quel enseignant)</li>
+   </ul>   
+    
+ </li>
+ 
+  <li> Gestion des formations :
+    <ul> 
+      <li>Liste</li>
+      <li>Ajout d’une formation</li>
+      <li>Modification d’une formation</li> 
+      <li>Supression d’une formation</li>
+   </ul>   
+    
+ </li>
+ 
+   <li> Gestion du planning :
+    <ul> 
+      <li>Création d’une nouvelle séance de cours(pour n’importe quel enseignant)</li>
+      <li>Mise à jour d’une séance de cours(pour n’importe quel enseignant)</li>
+      <li>Suppression d’une séance de cours(pour n’importe quel enseignant)</li> 
+      <li>Utiliser 2 vues différentes pour les opérations ci-dessus (par cours et par semaine)</li>
+   </ul>   
+    
+ </li>
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+</ul>
+ 
+ 
+ </ol>
+ </br>
+ 
+ ## Notes :
+<ul>
+    <li>Pour simplifier le projet, il existe un seul endroit qui stocke les identifiants des acteurs (la table users). Par conséquent il
+faut vérifier le type pour les discriminer, afficher les bonnes pages et vérifier les droits. </li> 
+    <li>Le compte administrateur (admin:admin) est précrée dans la base initiale.</li>
+    <li>Pour créer un compte la procédure est la suivante : l’utilisateur remplit le formulaire en indiquant entre autre sa
+formation (pour les enseignants et les admins – un item spécial serait utilisé). Ces informations seront inscrits dans la
+table users (avec le type égal à null). Ensuite, l’administrateur valide cette demande et maj le type. Donc un type=null
+indique que l’utilisateur est inactive et ne peut pas encore accéder au site. </li> 
+    <li>Pour un enseignant ou admin le champs formation_id sera null.</li>
+    <li>Un admin peut contourner la procédure ci-dessus, en créant directement un enregistrement.</li> 
+    <li>Afin de mieux tester les différents cas d’utilisation, utilisez des Seeders pour remplir la BD avec des données factices.</li>
+    <li>La base de données suit les conventions de nommage de Laravel (excepté le cours).</li> 
+ </ul>
+
+<br/>
+ 
+## Base de données :
+<ul>
+    <li>users (id,nom,prenom,login,mdp,formation_id,type)
+</li> 
+    <li>formations(id,intitule,created_at,updated_at)
+</li>
+    <li>cours(id,intitule,user_id,formation_id,created_at,updated_at)
+</li>
+    <li>cours_users(cours_id,user_id)</li>
+    </li>
+    <li>plannings(id,cours_id,date_debut,date_fin)</li>
+ </ul>
+
+<br/>
