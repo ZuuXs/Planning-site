@@ -181,3 +181,38 @@ indique que l’utilisateur est inactive et ne peut pas encore accéder au site.
  </ul>
 
 <br/>
+
+## Utilisation :
+<ol>
+    <li><bold>Clone the Repository:</bold></li>
+    <ul>
+        <li>Open your terminal.</li>
+        <li>Run the command: <code>git clone https://github.com/ZuuXs/Planning-site.git</code></li>
+    </ul>
+    <li><bold>Navigate to the Project Directory:</bold></li>
+    <ul>
+        <li>Change directory to the cloned repository: <code>cd Planning-site</code></li>
+    </ul>
+    <li><bold>Install Dependencies:</bold></li>
+    <ul>
+        <li>Run the command: <code>composer install</code></li>
+    </ul>
+    <li><bold>Setup Environment Configuration:</bold></li>
+    <ul>
+        <li>Copy the example environment file: <code>cp .env.example .env</code></li>
+        <li>Generate the application key: <code>php artisan key:generate</code></li>
+        <li>Update the <code>.env</code> file with your database credentials and other configurations.</li>
+    </ul>
+    <li><bold>Migrate the Database:</bold></li>
+    <ul>
+        <li>Run the migrations to create the database tables: <code>php artisan migrate</code></li>
+    </ul>
+    <li><bold>Run the Application:</bold></li>
+    <ul>
+        <li>Start the development server: <code>php artisan serve</code></li>
+    </ul>
+    <li><bold>Access the Application:</bold></li>
+    <ul>
+        <li>Open your web browser and go to: <code>http://localhost:8000</code></li>
+    </ul>
+</ol>
